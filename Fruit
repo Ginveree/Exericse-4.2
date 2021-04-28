@@ -1,0 +1,16 @@
+package OverRL;
+
+public class Fruit {//super class
+	private String name;
+	
+	//no argument
+	public Fruit() {//constructor with no argument
+		this.name = " ";
+	}
+	
+	public Fruit(String n) {//constructor with 1 argument
+		this.name = n;
+		System.out.println("Fruit constructor is invoked");
+	}
+
+}
