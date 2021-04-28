@@ -1,0 +1,32 @@
+package OverRL;
+
+public class GreenApple extends Apple {
+    private int plasticQ;
+    private double plasticP;
+	
+	public GreenApple(int q, double p, int pQ, double pP) {//constructor for sub class with 4 arguments
+		super(q,p);
+		this.plasticQ = pQ;
+		this.plasticP = pP;
+	}
+	
+	//overriding method
+	public double totalPrice() {
+		return this.price * this.quantity;
+	}
+	
+	//overloading method with no parameter
+	public double plasticT() {
+		return plasticQ * plasticP;
+	}		
+	
+	//overloading method with 1 parameter
+	public double plasticT(int plasticQ) {
+		return plasticQ * 0.20;
+	}
+	
+	//overriding method
+	public String toString() {
+		return "Total price for green apples is RM " + totalPrice() + "\nPrice for plactic bag is RM ";
+	}
+}
