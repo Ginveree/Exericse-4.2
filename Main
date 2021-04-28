@@ -1,0 +1,42 @@
+package OverRL;
+
+public class Main {
+
+public static void main(String[] args) {
+		
+		System.out.println("*******************Fruit*******"
+				+ "***************");
+		Fruit objF = new Fruit("Fruit");	
+		System.out.println("\n");
+		
+		System.out.println("******************Orange******"
+				+ "****************");
+		Orange objO = new Orange("Orange","Yellow","Australia");	
+		System.out.println(objO.toString());
+		objO.overRipe();
+		System.out.println("\n");
+		
+		System.out.println("******************Banana**********"
+				+ "************");
+		Banana objB = new Banana("Banana",'Y',6);
+		objB.ripe();
+		System.out.println(objB.toString() + objB.totalPrice(6, 0.10) + "\n\n");
+		
+		System.out.println("*******************Apple*********"
+				+ "*************");
+		Apple objA = new Apple(10,23.50);
+		System.out.println(objA.toString() + "\n\n");
+		
+		System.out.println("******************Red Apple*******"
+				+ "************");
+		RedApple objR = new RedApple(5,2.30);
+		System.out.println(objR.getTaste("sweet", "sour") + "\n" + objR.toString());
+		System.out.println("\n");
+		
+		System.out.println("****************Green Apple*****"
+				+ "**************");
+		GreenApple objG = new GreenApple(6,3.50,5,0.35);
+		System.out.println(objG.toString() + objG.plasticT());
+	}
+
+}
