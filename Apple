@@ -1,0 +1,28 @@
+package OverRL;
+
+public class Apple extends Fruit {//sub class of fruit
+	protected double price;
+	protected int quantity;
+
+	public Apple() {//constructor for sub class
+		super();//inherit data, method from super class(constructor with no argument)
+	}
+	
+	public Apple(String n) {//constructor for sub class with argument
+		super(n);//inherit data, method from super class(constructor with 1 argument)
+	}
+	
+	public Apple(int q, double p) {//constructor for sub class with 2 arguments
+		this.price = p;
+		this.quantity = q;
+	}
+	
+	public double totalPrice() {
+		return this.price * this.quantity;
+	}
+	
+	//overriding method
+	public String toString() {
+		return "The total price for " + this.quantity + " apples is RM " + totalPrice();
+	}
+}
