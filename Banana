@@ -1,0 +1,41 @@
+package OverRL;
+
+public class Banana extends Fruit {
+	private char ripe;
+	private double weight;
+	
+	public Banana(String n, char r, double w) {//constructor for sub class with 3 arguments
+		super(n);//inherit data, method from super class(constructor with 1 argument)
+		this.ripe = r;	
+		this.weight = w;
+	}
+	
+	public void ripe() {
+		if ((this.ripe == 'Y') || (this.ripe == 'y')) 
+			System.out.println("Banana is finally ripe!");	
+		else if ((this.ripe == 'N') || (this.ripe == 'n'))
+		    System.out.println("Banana is not ripe!");
+		else
+			System.out.println("Error!");
+	}
+	
+	//overloading method with no parameter
+	public double totalPrice() {
+		return (this.weight * 6);		
+	}
+	
+	//overloaing method with 1 parameter
+	public double totalPrice(double p) {
+		return (this.weight * p);
+	}
+	
+	//overloading method with 2 parameters
+	public double totalPrice(double p, double d) {
+		return (this.weight * p * d);
+	}
+	
+	//overriding method
+	public String toString() {
+		return ("The total price is RM ");	
+	}
+}
