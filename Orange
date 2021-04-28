@@ -1,0 +1,26 @@
+package OverRL;
+
+public class Orange extends Fruit {
+    private String colour, location;
+	
+	public Orange(String n, String c, String l) {//constructor for sub class with 3 arguments
+		super(n);//inherit data, method from super class(constructor with 1 argument)
+		this.colour = c;
+		this.location = l;
+	}
+	
+	//overloading with no parameter
+	public void overRipe() {
+		System.out.println("All oranges are overripe!");
+	}
+	
+	//overloading with 1 parameter
+	public int overRipe(int oR) {
+		return oR;
+	}
+	
+	//overriding method
+	public String toString() {
+		return ("The oranges are from "+ this.location + "\nThe colour is " + this.colour);
+	}
+}
