@@ -1,0 +1,32 @@
+package OverRL;
+
+public class RedApple extends Apple {
+	private String taste1, taste2;
+	
+	public RedApple(int q, double p) {
+		super(q,p);
+	}
+		
+	//Overloading method with 1 parameter
+	public String getTaste(String t1) {
+		return this.taste1;
+	}
+	
+	//Overloading method with 2 parameter
+	public String getTaste(String t1, String t2) {
+		taste1 = t1;
+		taste2 = t2;
+		return ("The Red Apple is " + taste1 + " and " + taste2 + ".");
+	}
+
+	//overriding method
+	public double totalPrice() {
+		return this.price * this.quantity;
+	}
+	
+	//overriding method
+	public String toString() {
+		return "The total price for " + this.quantity + " red apples is RM " + totalPrice();
+	}
+
+}
